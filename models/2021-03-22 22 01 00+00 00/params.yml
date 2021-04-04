@@ -1,0 +1,4 @@
+BikeRentalFeatureExtractor: {}
+regressor:
+  max_depth: 20
+  n_estimators: 48

@@ -1,0 +1,26 @@
+hyperparams:
+  BikeRentalFeatureExtractor: {}
+  regressor:
+    n_estimators: 48
+    max_depth: 20
+
+data:
+  filepath: ./dataset.csv
+
+metrics:
+  - name: bike_number_error
+    params: {}
+
+search:
+  jobs: -1
+  grid:
+    BikeRentalFeatureExtractor: {}
+    regressor:
+      n_estimators: [6 ,8, 10 , 12 ,24 ,48]
+      max_depth: [null, 10, 20, 30, 60] 
+
+export:
+  output_dir: models
+
+reports:
+  dir: reports
